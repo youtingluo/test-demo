@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&display=swap');
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 21px;
+  margin: 0;
+  transition: 0.3s;
+}
+body.active {
+  transform: translateX(300px);
+}
+nav {
+  font-family: '微軟正黑體';
+  border-right: 2px solid gray;
+  position: fixed;
+  background-color: #53ca4d;
+  color: #000;
+  width: 300px;
+  height: 100vh;
+  z-index: 99;
+  transform: translateX(-100%);
+}
+
+nav .logo {
+  text-align: center;
+  padding: 30px 0;
+}
+nav .logo img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+nav .list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+.list li {
+  background-color: #000;
+  text-align: center;
+  border-bottom: 3px solid #fff;
+}
+.list li:first-of-type {
+  border-top: 3px solid #fff;
+}
+.list li a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  padding: 20px 0;
+  font-weight: 500;
+}
+.list li a::before {
+  content: '';
+  width: 0;
+  height: 100%;
+  background-color: #53ca4d;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: 0.3s;
+  z-index: -1;
+}
+.list li a:hover {
+  color: #000;
+}
+.list li a:hover::before {
+  width: 100%;
+}
+button {
+  padding: 5px 15px;
+  background-color: #53ca4d;
+  border: 0;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 20px;
+}
+.cta-btn:hover {
+  background-color: #fff;
+  color: #53ca4d;
+}
+header {
+  position: relative;
+  background-color: #000;
+  color: #53ca4d;
+  text-align: center;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header p {
+  line-height: 1.5;
+  width: 500px;
+  margin-bottom: 30px;
+}
+header .toggle {
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  left: 60px;
+  top: 40px;
+}
+.container {
+  max-width: 100%;
+  width: 1000px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.modal-container {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: none;
+}
+.modal-container.active {
+  display: block;
+}
+.modal {
+  border: 1px solid #000;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 600px;
+  overflow: hidden;
+  animation: modalShow 1s ease;
+}
+@keyframes modalShow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.modal .close-btn {
+  background-color: transparent;
+  position: absolute;
+  right: 40px;
+  top: 25px;
+  font-size: 26px;
+}
+
+.modal-header {
+  background-color: #53ca4d;
+  color: #000;
+  width: 100%;
+  text-align: center;
+}
+.modal-content {
+  background-color: #fff;
+  width: 100%;
+  text-align: center;
+}
+.modal-content p {
+  margin: 20px 0;
+}
+.modal-form {
+  padding: 0 40px 40px 40px;
+}
+.modal-form label {
+  display: block;
+  text-align-last: left;
+}
+.modal-form input {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+}
+.modal-form input[type='submit'] {
+  background-color: #53ca4d;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+.modal-form input[type='submit']:hover {
+  background-color: #000;
+  color: #53ca4d;
+}

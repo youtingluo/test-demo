@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ccc;
+  margin: 0;
+}
+#customVideo {
+  width: 50%;
+  border-radius: 10px 10px 0 0;
+}
+
+/* input process */
+/* input[type='range'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 30px;
+  width: 200px;
+  background: none;
+  outline: none;
+  border-radius: 0;
+  overflow: hidden;
+  cursor: pointer;
+  max-width: 50%;
+}
+/* 是能調整 input 後方那一條狀物的朋友*/
+/*input[type='range']::-webkit-slider-runnable-track {
+  background-color: #ddd;
+}
+/* 是能調整拖曳鈕的朋友 
+ input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none; /* 一樣要消除 */
+/* width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border: 2px solid #999;
+  box-shadow: -100vw 0 0 100vw #69eaab;
+  border-radius: 50%;
+}  */
+.control {
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  width: 50%;
+  border-radius: 0 0 10px 10px;
+  padding: 10px;
+}
+.control i.fa-play-circle {
+  color: #f06565;
+}
+.control i.fa-stop-circle {
+  color: #21ef00;
+}
+.control i {
+  margin-right: 5px;
+  cursor: pointer;
+}
+.control span {
+  margin-left: 5px;
+}
+.control .time {
+  user-select: none;
+}
+@media (max-width: 768px) {
+  #customVideo {
+    width: 70%;
+  }
+  .control {
+    width: 70%;
+  }
+}

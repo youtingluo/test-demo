@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="#"/>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/progress.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <title>客製化影片</title>
+  </head>
+  <body>
+    <video id="customVideo" src="./videos/slide.mp4" poster="https://images.unsplash.com/photo-1619958405137-8dc6281021bb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"></video>
+    <div class="control">
+      <div class="play"><i class="far fa-play-circle fa-2x"></i></i></div>
+      <!-- <div class="pause"><i class="far fa-pause-circle fa-2x"></i></div> -->
+      <div class="stop"><i class="far fa-stop-circle fa-2x"></i></div>
+      <input type="range" id="video-range" min="0" max="100" step="0.1" value="0">
+      <span class="time">00:00</span>
+    </div>
+  
+    <script src="js/all.js"></script>
+  </body>
+</html>
